@@ -2,13 +2,13 @@ package com.google.codelabs.mdc.kotlin.shrine
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.app.Activity
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.DisplayMetrics
 import android.view.View
 import android.view.animation.Interpolator
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * [android.view.View.OnClickListener] used to translate the product grid sheet downward on
@@ -24,7 +24,7 @@ class NavigationIconClickListener @JvmOverloads internal constructor(
 
     init {
         val displayMetrics = DisplayMetrics()
-        (context as Activity).windowManager.defaultDisplay.getMetrics(displayMetrics)
+        (context as AppCompatActivity).windowManager.defaultDisplay.getMetrics(displayMetrics)
         height = displayMetrics.heightPixels
     }
 
